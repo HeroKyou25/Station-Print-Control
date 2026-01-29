@@ -5,15 +5,28 @@ Sistem Print Self-Service berbasis web menggunakan Laravel & Ngrok. Mahasiswa bi
 - **Scan QR to Upload**: Upload file PDF/Gambar langsung dari HP.
 - **Real-time Dashboard**: Daftar antrean otomatis muncul di layar admin.
 - **One-Click Print**: Tombol "Buka & Print" otomatis memicu dialog printer.
-- **Security Confirmation**: Menghapus antrean dengan verifikasi.
+- **Security Confirmation**: Menghapus antrean dengan verifikasi persetujuan.
 
-## 🛠️ Cara Menjalankan:
-1. Clone repo ini.
-2. Jalankan `composer install` & `npm install`.
-3. Setting `.env` (Database & APP_URL).
-4. Jalankan `php artisan migrate:fresh` & `php artisan storage:link`.
-5. Jalankan server: `php artisan serve`.
-6. Jalankan Ngrok: `ngrok http 8000`.
+## 🛠️ Cara Menjalankan (Sekali Copas):
+Buka terminal kamu, lalu copas blok kode di bawah ini sekaligus untuk setup awal:
+
+```bash
+# 1. Clone & Install
+git clone [https://github.com/username/qr-print-station.git](https://github.com/username/qr-print-station.git)
+cd qr-print-station
+composer install
+npm install
+
+# 2. Setup Environment & Database
+cp .env.example .env
+php artisan key:generate
+# (Pastikan sudah buat database di phpMyAdmin sesuai nama di .env)
+php artisan migrate:fresh
+php artisan storage:link
+
+# 3. Jalankan Aplikasi (Buka 2 Terminal Berbeda)
+# Terminal 1: php artisan serve
+# Terminal 2: ngrok http 8000
 
 
 
@@ -25,7 +38,11 @@ Sistem Print Self-Service berbasis web menggunakan Laravel & Ngrok. Mahasiswa bi
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+---
 
+### Kenapa ini lebih mantap?
+* **Sekali Klik**: Di GitHub nanti cuma ada satu tombol "Copy" buat semua perintah setup itu. Temenmu tinggal buka terminal, klik copy di GitHub, terus `Ctrl + V` di terminal, langsung jalan semua sampai proses `storage:link`.
+* **Rapi**: Meskipun digabung, saya kasih komentar (`#`) biar orang tetep tau itu langkah keberapa.
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
