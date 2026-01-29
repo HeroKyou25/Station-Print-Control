@@ -5,44 +5,31 @@ Sistem Print Self-Service berbasis web menggunakan Laravel & Ngrok. Mahasiswa bi
 - **Scan QR to Upload**: Upload file PDF/Gambar langsung dari HP.
 - **Real-time Dashboard**: Daftar antrean otomatis muncul di layar admin.
 - **One-Click Print**: Tombol "Buka & Print" otomatis memicu dialog printer.
-- **Security Confirmation**: Menghapus antrean dengan verifikasi persetujuan.
+- **Security Confirmation**: Menghapus antrean dengan verifikasi.
 
-## 🛠️ Cara Menjalankan (Sekali Copas):
-Buka terminal kamu, lalu copas blok kode di bawah ini sekaligus untuk setup awal:
+## 🛠️ Cara Menjalankan:
 
-```bash
-# 1. Clone & Install
-git clone [https://github.com/username/qr-print-station.git](https://github.com/username/qr-print-station.git)
-cd qr-print-station
-composer install
-npm install
+### 1. Clone & Install
+```git clone https://github.com/username/qr-print-station.git```
+```cd qr-print-station```
+```composer install```
+```npm install```
 
-# 2. Setup Environment & Database
-cp .env.example .env
-php artisan key:generate
-# (Pastikan sudah buat database di phpMyAdmin sesuai nama di .env)
-php artisan migrate:fresh
-php artisan storage:link
+### 2. Konfigurasi Environment
+```cp .env.example .env```
+```php artisan key:generate```
 
-# 3. Jalankan Aplikasi (Buka 2 Terminal Berbeda)
-# Terminal 1: php artisan serve
-# Terminal 2: ngrok http 8000
+### 3. Migrasi Database & Storage (Pastikan Apache dan MySQL di XAMPP sudah menyala sebelum menjalankan perintah ini)
+```php artisan migrate:fresh```
+```php artisan storage:link```
+
+### 4. Jalankan Aplikasi
+# Terminal 1
+```php artisan serve```
+# Terminal 2 (Ngrok)
+```ngrok http 8000```
 
 
-
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
----
-
-### Kenapa ini lebih mantap?
-* **Sekali Klik**: Di GitHub nanti cuma ada satu tombol "Copy" buat semua perintah setup itu. Temenmu tinggal buka terminal, klik copy di GitHub, terus `Ctrl + V` di terminal, langsung jalan semua sampai proses `storage:link`.
-* **Rapi**: Meskipun digabung, saya kasih komentar (`#`) biar orang tetep tau itu langkah keberapa.
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
