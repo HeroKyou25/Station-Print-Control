@@ -1,3 +1,22 @@
+# 🖨️ QR-Print Station
+Sistem Print Self-Service berbasis web menggunakan Laravel & Ngrok. Mahasiswa bisa scan QR untuk upload file dari HP, dan admin bisa langsung mencetak dari dashboard.
+
+## ✨ Fitur Utamanya:
+- **Scan QR to Upload**: Upload file PDF/Gambar langsung dari HP.
+- **Real-time Dashboard**: Daftar antrean otomatis muncul di layar admin.
+- **One-Click Print**: Tombol "Buka & Print" otomatis memicu dialog printer.
+- **Security Confirmation**: Menghapus antrean dengan verifikasi.
+
+## 🛠️ Cara Menjalankan:
+1. Clone repo ini.
+2. Jalankan `composer install` & `npm install`.
+3. Setting `.env` (Database & APP_URL).
+4. Jalankan `php artisan migrate:fresh` & `php artisan storage:link`.
+5. Jalankan server: `php artisan serve`.
+6. Jalankan Ngrok: `ngrok http 8000`.
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
