@@ -26,7 +26,10 @@ npm install
 ### 2. Konfigurasi Environment
 ```bash 
 cp .env.example .env
+```
+```bash 
 php artisan key:generate
+```
 
 ### 3. Migrasi Database & Storage (Pastikan Apache dan MySQL di XAMPP sudah menyala sebelum menjalankan perintah ini)
 ```bash 
