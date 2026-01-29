@@ -12,24 +12,37 @@ Sistem Print Self-Service berbasis web menggunakan Laravel & Ngrok. Mahasiswa bi
 ### 1. Clone & Install
 ```bash 
 git clone https://github.com/username/qr-print-station.git
+```
+```bash 
 cd qr-print-station
+```
+```bash 
 composer install
+```
+```bash 
 npm install
 ```
 
 ### 2. Konfigurasi Environment
-```cp .env.example .env```
-```php artisan key:generate```
+```bash 
+cp .env.example .env
+php artisan key:generate
 
 ### 3. Migrasi Database & Storage (Pastikan Apache dan MySQL di XAMPP sudah menyala sebelum menjalankan perintah ini)
-```php artisan migrate:fresh```
-```php artisan storage:link```
+```bash 
+php artisan migrate:fresh
+php artisan storage:link
+```
 
 ### 4. Jalankan Aplikasi
 # Terminal 1
-```php artisan serve```
+```bash 
+php artisan serve
+```
 # Terminal 2 (Ngrok)
-```ngrok http 8000```
+```bash 
+ngrok http 8000
+```
 
 
 ## About Laravel
